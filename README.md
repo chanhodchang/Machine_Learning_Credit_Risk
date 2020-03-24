@@ -10,6 +10,7 @@ Used different resampling methods such as Oversampling, Undersampling, and Combi
 
 ## Analysis
 
+## Resampling
 ### Naive Random Oversampling
 - Balanced Accuracy Score
 64.03%
@@ -73,3 +74,35 @@ Used different resampling methods such as Oversampling, Undersampling, and Combi
 | Low-Risk  | 17,104 | 1.00      | 0.57   |
 - Summarized Analysis
 
+
+## Ensemble
+### Balanced Random Forest Classifier
+- Balanced Accuracy Score
+78.55%
+- Confusion Matrix
+|           | Count  | Precision | Recall |
+|-----------|--------|-----------|--------|
+| High-Risk | 101    | 0.01      | 0.72   |
+| Low-Risk  | 17,104 | 1.00      | 0.57   |
+- Classification Report
+|           | Count  | Precision | Recall |
+|-----------|--------|-----------|--------|
+| High-Risk | 101    | 0.04      | 0.67   |
+| Low-Risk  | 17,104 | 1.00      | 0.90   |
+- Summarized Analysis
+
+
+### Easy Ensemble AdaBoost Classifier
+- Balanced Accuracy Score
+93.17%
+- Confusion Matrix
+|                | Predicted True | Predicted False |
+|----------------|----------------|-----------------|
+| Actually True  | 93             | 8               |
+| Actually False | 983            | 16,121          |
+- Classification Report
+|           | Count  | Precision | Recall |
+|-----------|--------|-----------|--------|
+| High-Risk | 101    | 0.09      | 0.92   |
+| Low-Risk  | 17,104 | 1.00      | 0.94   |
+- Summarized Analysis
